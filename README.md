@@ -1,5 +1,24 @@
-here are the print statments
+/* Program to host online elections allowing registered users to vote
+Authors : Raghav Arora, Abhiram Jammula and Kanulla Lakshmi Thanuja. */
 
+#include<stdio.h>
+
+
+#define CANDIDATE_COUNT
+#define CANDIDATE1 "Bhartiya Janta Party(BJP)"
+#define CANDIDATE2 "Bahujan Saamajh Party(BSP)"
+#define CANDIDATE3 "Congras"
+#define CANDIDATE4 "Communist Party of India(CPI)"
+
+int votesCount1=0, votesCount2=0, votesCount3=0, votesCount4=0, spoiledtvotes=0,confirm;
+long long int id,pass,idcheck;
+long long int Raghav=21110010584,pass_r=2303;
+long long int Abhiram=21110010583,pass_a=2534;
+long long int Thanuja=21110010585,pass_t=2106;
+
+
+void information()
+{
     printf("\n\t1)\t NAME: Narendera Modi");
     printf("\n\t\t DOB: 17/09/1950");
     printf("\n\t\t Education: Bachelor of arts degree in political science of open learning University of Delhi");
@@ -24,8 +43,45 @@ here are the print statments
     printf("\n\t\t Education: B.Sc from Gudiyattam in Vellore");
     printf("\n\t\t Party: Communist Party of India");
     printf("\n\t\t Symbol: Hammer, Sickle and Star");
+}
 
-here is the switch cases
+void castVote()
+{
+     idcheck=id;
+    int choice;
+    repeat :
+        printf("\t\t\t==============================================\n");
+    printf("\t\t\t Type your ID:            ");
+    scanf("%lld",&id);
+    if(idcheck==id)
+    {
+        printf("\n\t\t\t The user has already voted before.\n");
+        printf("\n\t\t\t==============================================\n");
+    }
+    printf("\t\t\t Now type your password : ");
+    scanf("%lld",&pass);
+    printf("\n\t\t\t==============================================\n");
+    if((id==Raghav && pass_r==pass)||(id==Abhiram && pass_a==pass)||(id==Thanuja && pass_t==pass))
+{
+    reselect:
+    printf("\n\n\t\t\t     #### Please choose your Candidate ####\n\n");
+    printf("\n\t\t\t\t 1. %s", CANDIDATE1);
+    printf("\n\t\t\t\t 2. %s", CANDIDATE2);
+    printf("\n\t\t\t\t 3. %s", CANDIDATE3);
+    printf("\n\t\t\t\t 4. %s", CANDIDATE4);
+    printf("\n\t\t\t\t 5. %s", "None of These");
+    again :
+    printf("\n\n\t\t\t\t Input your choice (1 - 5) : ");
+    scanf("%d",&choice);
+}
+
+    else{
+    printf("\n\n\t\t Either the ID or the password is wrong, kindly try again\n\n\n");
+    goto repeat;
+
+}
+    switch(choice){
+        reconfirm1:
 
     case 1:
          printf("\n\t\t\t\t Confirm the vote?\n\t\t\t\t 1. Yes\n\t\t\t\t 2. No\n\t\t\t\t enter 1 or 2-");
@@ -105,7 +161,41 @@ here is the switch cases
                  //hold the screen
                  getchar();
 
-here are the do wile loops
+}
+printf("\n\t\t\t\t Thank you for voting !!");
+}
+
+void votesCount()
+{
+    printf("\n\n\t\t\t      ##### Voting Statics ####");
+    printf("\n\t\t\t\t    %s - %d ", "BJP       ", votesCount1);
+    printf("\n\t\t\t\t    %s - %d ", "BSP       ", votesCount2);
+    printf("\n\t\t\t\t    %s - %d ", "Congress  ", votesCount3);
+    printf("\n\t\t\t\t    %s - %d ", "CPI       ", votesCount4);
+    printf("\n\t\t\t\t    %s - %d ", "NOTA      ", spoiledtvotes);
+    printf("\n\n\n\t\t\t     ***************************************\n\n");
+}
+
+void getLeadingCandidate()
+{
+        printf("\n\n\t\t\t    #### Leading Candiate ####\n\n");
+        if(votesCount1>votesCount2 && votesCount1>votesCount3 && votesCount1 >votesCount4)
+        printf("\t\t\t [%s]\n\n\n\n\n",CANDIDATE1);
+        else if (votesCount2>votesCount3 && votesCount2>votesCount4 && votesCount2 >votesCount1)
+        printf("\t\t\t [%s]\n\n\n\n\n",CANDIDATE2);
+        else if(votesCount3>votesCount4 && votesCount3>votesCount2 && votesCount3 >votesCount1)
+        printf("\t\\t\t [%s]\n\n\n\n\n",CANDIDATE3);
+        else if(votesCount4>votesCount1 && votesCount4>votesCount2 && votesCount4 >votesCount3)
+        printf("\t\t\t [%s]\n\n\n\n\n",CANDIDATE4);
+        else
+        printf("\t\t\t   ----- Warning !!! No-win situation----\n\n\n\n\n\n");
+}
+
+	
+int main()
+{
+	int i;
+	int choice;
 	
 	do{
 	    printf("\n\n \t\t\t     ###### Welcome to Election/Voting 2021 #####");
@@ -132,3 +222,5 @@ here are the do wile loops
 	    }
 	}while(choice!=4);
 	
+	return 0;
+}
