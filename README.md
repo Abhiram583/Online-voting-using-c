@@ -105,41 +105,7 @@ here is the switch cases
                  //hold the screen
                  getchar();
 
-}
-printf("\n\t\t\t\t Thank you for voting !!");
-}
-
-void votesCount()
-{
-    printf("\n\n\t\t\t      ##### Voting Statics ####");
-    printf("\n\t\t\t\t    %s - %d ", "BJP       ", votesCount1);
-    printf("\n\t\t\t\t    %s - %d ", "BSP       ", votesCount2);
-    printf("\n\t\t\t\t    %s - %d ", "Congress  ", votesCount3);
-    printf("\n\t\t\t\t    %s - %d ", "CPI       ", votesCount4);
-    printf("\n\t\t\t\t    %s - %d ", "NOTA      ", spoiledtvotes);
-    printf("\n\n\n\t\t\t     ***************************************\n\n");
-}
-
-void getLeadingCandidate()
-{
-        printf("\n\n\t\t\t    #### Leading Candiate ####\n\n");
-        if(votesCount1>votesCount2 && votesCount1>votesCount3 && votesCount1 >votesCount4)
-        printf("\t\t\t [%s]\n\n\n\n\n",CANDIDATE1);
-        else if (votesCount2>votesCount3 && votesCount2>votesCount4 && votesCount2 >votesCount1)
-        printf("\t\t\t [%s]\n\n\n\n\n",CANDIDATE2);
-        else if(votesCount3>votesCount4 && votesCount3>votesCount2 && votesCount3 >votesCount1)
-        printf("\t\\t\t [%s]\n\n\n\n\n",CANDIDATE3);
-        else if(votesCount4>votesCount1 && votesCount4>votesCount2 && votesCount4 >votesCount3)
-        printf("\t\t\t [%s]\n\n\n\n\n",CANDIDATE4);
-        else
-        printf("\t\t\t   ----- Warning !!! No-win situation----\n\n\n\n\n\n");
-}
-
-	
-int main()
-{
-	int i;
-	int choice;
+here are the do wile loops
 	
 	do{
 	    printf("\n\n \t\t\t     ###### Welcome to Election/Voting 2021 #####");
@@ -166,5 +132,3 @@ int main()
 	    }
 	}while(choice!=4);
 	
-	return 0;
-}
