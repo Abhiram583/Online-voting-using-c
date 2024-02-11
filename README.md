@@ -1,5 +1,5 @@
 /* Program to host online elections allowing registered users to vote
-Authors : Raghav Arora, Abhiram Jammula and Kanulla Lakshmi Thanuja. */
+Authors : Abhiram Jammula/
 
 #include<stdio.h>
 
