@@ -1,24 +1,5 @@
-/* Program to host online elections allowing registered users to vote
-Authors : Raghav Arora, Abhiram Jammula and Kanulla Lakshmi Thanuja. */
+here are the print statments
 
-#include<stdio.h>
-
-
-#define CANDIDATE_COUNT
-#define CANDIDATE1 "Bhartiya Janta Party(BJP)"
-#define CANDIDATE2 "Bahujan Saamajh Party(BSP)"
-#define CANDIDATE3 "Congras"
-#define CANDIDATE4 "Communist Party of India(CPI)"
-
-int votesCount1=0, votesCount2=0, votesCount3=0, votesCount4=0, spoiledtvotes=0,confirm;
-long long int id,pass,idcheck;
-long long int Raghav=21110010584,pass_r=2303;
-long long int Abhiram=21110010583,pass_a=2534;
-long long int Thanuja=21110010585,pass_t=2106;
-
-
-void information()
-{
     printf("\n\t1)\t NAME: Narendera Modi");
     printf("\n\t\t DOB: 17/09/1950");
     printf("\n\t\t Education: Bachelor of arts degree in political science of open learning University of Delhi");
