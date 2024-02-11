@@ -24,45 +24,8 @@ here are the print statments
     printf("\n\t\t Education: B.Sc from Gudiyattam in Vellore");
     printf("\n\t\t Party: Communist Party of India");
     printf("\n\t\t Symbol: Hammer, Sickle and Star");
-}
 
-void castVote()
-{
-     idcheck=id;
-    int choice;
-    repeat :
-        printf("\t\t\t==============================================\n");
-    printf("\t\t\t Type your ID:            ");
-    scanf("%lld",&id);
-    if(idcheck==id)
-    {
-        printf("\n\t\t\t The user has already voted before.\n");
-        printf("\n\t\t\t==============================================\n");
-    }
-    printf("\t\t\t Now type your password : ");
-    scanf("%lld",&pass);
-    printf("\n\t\t\t==============================================\n");
-    if((id==Raghav && pass_r==pass)||(id==Abhiram && pass_a==pass)||(id==Thanuja && pass_t==pass))
-{
-    reselect:
-    printf("\n\n\t\t\t     #### Please choose your Candidate ####\n\n");
-    printf("\n\t\t\t\t 1. %s", CANDIDATE1);
-    printf("\n\t\t\t\t 2. %s", CANDIDATE2);
-    printf("\n\t\t\t\t 3. %s", CANDIDATE3);
-    printf("\n\t\t\t\t 4. %s", CANDIDATE4);
-    printf("\n\t\t\t\t 5. %s", "None of These");
-    again :
-    printf("\n\n\t\t\t\t Input your choice (1 - 5) : ");
-    scanf("%d",&choice);
-}
-
-    else{
-    printf("\n\n\t\t Either the ID or the password is wrong, kindly try again\n\n\n");
-    goto repeat;
-
-}
-    switch(choice){
-        reconfirm1:
+here is the switch cases
 
     case 1:
          printf("\n\t\t\t\t Confirm the vote?\n\t\t\t\t 1. Yes\n\t\t\t\t 2. No\n\t\t\t\t enter 1 or 2-");
